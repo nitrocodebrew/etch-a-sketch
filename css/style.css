@@ -96,16 +96,6 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.header-container::after,
-.footer-container::before {
-    margin: 1.5rem 0 3rem 0;
-    display: block;
-    content: ' ';
-    width: auto;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #dbdbdb, transparent);
-}
-
 .new-grid-btn {
     background: linear-gradient(to bottom, #278aba, #165473);
 }
@@ -161,6 +151,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-container {
     text-align: center;
+    padding: 3rem 0;
+}
+
+.footer-container::before {
+    margin: 1.5rem 0 3rem 0;
+    display: block;
+    content: ' ';
+    width: auto;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #dbdbdb, transparent);
 }
 
 .footer-copy {
