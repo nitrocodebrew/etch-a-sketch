@@ -4,6 +4,18 @@ const $ = q => document.querySelector(q);
 // UI elements
 const sketchGridContainer = $('.sketch-grid-container');
 
+/**
+ * Use event delegation rather than attaching an event listener to 
+ * every single grid cell in the for loop. A 100 x 100 grid would 
+ * have thousands and thousands of event listeners! There's a better 
+ * way. 
+ */
+
+sketchGridContainer.addEventListener('mouseover', e => {
+    if(e.target.classList.contains('sketch-grid-cell'))
+        e.target.classList.add('filled');
+});
+
 // Dynamically generate a custom sized sketch grid
 const generateSketchGrid = size => {
     // First, clear any existing content in the container
