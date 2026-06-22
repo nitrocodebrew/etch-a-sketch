@@ -38,6 +38,18 @@ a:hover {
     color: #165473;
 }
 
+input, select, textarea, button {
+    font: inherit;
+    padding: 0.75rem;
+}
+
+button {
+    cursor: pointer;
+    color: #fbfbfb;
+    box-shadow:0 1px 24px rgba(0, 0, 0, 0.17);
+    border-radius: 12px;
+}
+
 a:active {
     border-bottom: 1px solid #cccccc;
 }
@@ -66,11 +78,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-container {
     padding: 1.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container h1 {
+    flex: 8;
+}
+
+.header-container button.new-grid-btn {
+    flex: 2;
 }
 
 .header-container h1 {
     font-size: 2.25rem;
-    text-align: center;
+
 }
 
 .header-container::after,
@@ -83,6 +106,14 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(to right, transparent, #dbdbdb, transparent);
 }
 
+.new-grid-btn {
+    background: linear-gradient(to bottom, #278aba, #165473);
+}
+
+.new-grid-btn:hover {
+    background: linear-gradient(to bottom, #165473, #278aba);
+    color: #ffffff;
+}
 /**
  * Sketchpad
  * ---------
