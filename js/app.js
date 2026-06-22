@@ -59,7 +59,7 @@ newSketchGridBtn.addEventListener('click', clickEvent => {
     // If the user clicks cancel, immediately exit the listener to prevent errors
     if(null === gridSizeInput) return;
 
-    const gridCellSize = +gridSizeInput.trim();
+    let gridCellSize = +gridSizeInput.trim();
 
     // Input is not numeric
     if(Number.isNaN(gridCellSize)) {
