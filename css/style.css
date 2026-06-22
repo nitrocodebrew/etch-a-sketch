@@ -15,6 +15,16 @@
     box-sizing: border-box;
 }
 
+/**
+ * Global styles + utilities
+ * -------------------------
+ */
+
+html {
+    font: 400 0.9rem/1.75 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Corbel, 'Trebuchet MS', Verdana, Tahoma, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
 /** Global layout container */
 .container {
     margin: 0 auto;
