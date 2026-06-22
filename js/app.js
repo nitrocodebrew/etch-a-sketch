@@ -1,4 +1,4 @@
-// Query selector shortcute
+// Query selector shortcut
 const $ = q => document.querySelector(q);
 
 // UI elements
