@@ -13,8 +13,10 @@ const newSketchGridBtn = $('.new-grid-btn');
  */
 
 sketchGridContainer.addEventListener('mouseover', e => {
-    if(e.target.classList.contains('sketch-grid-cell'))
+    if(e.target.classList.contains('sketch-grid-cell')) {
         e.target.classList.add('filled');
+        e.target.style.backgroundColor = generateRandomRGBColor();
+    }
 });
 
 // Dynamically generate a custom sized sketch grid
@@ -32,6 +34,15 @@ const generateSketchGrid = size => {
         i++;
     }
 }
+
+// Generate a random RGB color
+const generateRandomRGBColor = () => {
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    
+    return `rgb(${red}, ${green}, ${blue})`;
+};
 
 // Initialize default 16 by 16 grid
 generateSketchGrid(16);
@@ -61,5 +72,5 @@ newSketchGridBtn.addEventListener('click', clickEvent => {
     else if(gridCellSize > 100) gridCellSize = 100;
 
     generateSketchGrid(gridCellSize);
-    
+
 });
