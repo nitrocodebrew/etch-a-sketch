@@ -28,6 +28,20 @@ html {
     color: #7b7b7b;
 }
 
+a, a:link, a:visited {
+    font-weight: normal;
+    text-decoration: none;
+    color: #278aba;
+}
+
+a:hover {
+    color: #165473;
+}
+
+a:active {
+    border-bottom: 1px solid #cccccc;
+}
+
 p {
     margin: 1.5rem 0;
 }
@@ -43,6 +57,44 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     padding: 1rem;
     max-width: 1300px;
+}
+
+/**
+ * Page header
+ * -----------
+ */
+
+.header-container {
+    padding: 1.5rem 0;
+}
+
+.header-container h1 {
+    font-size: 2.25rem;
+    text-align: center;
+}
+
+.header-container::after,
+.footer-container::before {
+    margin: 1.5rem 0 3rem 0;
+    display: block;
+    content: ' ';
+    width: auto;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #dbdbdb, transparent);
+}
+
+/**
+ * Sketchpad
+ * ---------
+ */
+
+.sketchpad-container {
+    padding: 1rem;
+}
+
+.sketchpad-container > p {
+    font-size: 1.10rem;
+    text-align: center;
 }
 
 /** Sketchpad interface */
@@ -69,5 +121,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .filled {
     background-color: #555555;
+}
+
+/**
+ * Page footer
+ * -----------
+ */
+
+.footer-container {
+    text-align: center;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+}
+
+.footer-note {
+    font-variant: small-caps;
+    letter-spacing: 0.10rem;
 }
 
