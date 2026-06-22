@@ -1,0 +1,45 @@
+/**
+ * Universal reset
+ * ---------------
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+/** Global layout container */
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 1300px;
+}
+
+/** Sketchpad interface */
+.sketch-grid-container {
+    display: flex;
+    flex-flow: wrap;
+    margin: 0 auto;
+    width: 960px;
+    height: 960x;
+    border: 1px solid #ebebeb;
+}
+
+.sketch-grid-cell {
+    /** Start with a 16x16 grid by default. */
+    width: calc(100% / 16);
+    height: calc(100% / 16);
+    border: 1px solid #ebebeb;
+}
+
+.filled {
+    background-color: #555555;
+}
+
