@@ -37,6 +37,7 @@
     width: calc(100% / 16);
     height: calc(100% / 16);
     border: 1px solid #ebebeb;
+    cursor: pointer;
 }
 
 .filled {
