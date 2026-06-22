@@ -3,6 +3,7 @@ const $ = q => document.querySelector(q);
 
 // UI elements
 const sketchGridContainer = $('.sketch-grid-container');
+const newSketchGridBtn = $('.new-grid-btn');
 
 /**
  * Use event delegation rather than attaching an event listener to 
